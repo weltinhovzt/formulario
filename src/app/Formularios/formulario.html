@@ -12,5 +12,5 @@
         </div>
     </div>
 
-    <button *ngFor='let button of buttons' type="button" (click)="actions(button?.funcao())">{{button?.nome}}</button>
+    <button *ngFor='let button of buttons' type="button" (click)="button?.funcao()">{{button?.nome}}</button>
 </form>

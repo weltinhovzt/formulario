@@ -83,10 +83,4 @@ export class Formularios implements OnInit {
             }
         });
     }
-
-    actions(event){
-        this.event.emit(event)
-    }
-
-    
 }
