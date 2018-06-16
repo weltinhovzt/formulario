@@ -1,0 +1,16 @@
+<form [formGroup]="formulario" class="{{classForm}}">
+    <div *ngFor='let item of inputs'>
+        <input formControlName='{{item?.formControlName}}' 
+        placeholder={{item?.placeHolder}}
+        autocomplete="off"
+        type={{item?.type}}
+        [class.bordererror]="ValidandoVisual(item?.formControlName)" 
+        >
+        
+        <div *ngIf="ValidandoVisual(item.formControlName)">
+            <p>{{ValidandoMensagemDeErro(item.formControlName)}}</p>
+        </div>
+    </div>
+
+    <button *ngFor='let button of buttons' type="button" (click)="actions(button?.funcao())">{{button?.nome}}</button>
+</form>
